@@ -182,8 +182,9 @@ main () {
     ###### Create directory ######
     rm -rf "${OVERLAY_TEMP_DIR}"
     mkdir -p "${OVERLAY_TEMP_DIR}"
-    rm -rf "${output_dir}"
-    mkdir -p "${output_dir}"
+    if [[ ${input_dir} != ${output_dir} ]] ; then
+        mkdir -p "${output_dir}"
+    fi
     ###### Specify badge image ######
     if [[ ${badge_mode} != "--alpha" ]] ; then
         badge_file_path="${ICON_BADGE_ALPHA}"

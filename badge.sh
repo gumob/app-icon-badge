@@ -186,9 +186,9 @@ main () {
         mkdir -p "${output_dir}"
     fi
     ###### Specify badge image ######
-    if [[ ${badge_mode} != "--alpha" ]] ; then
+    if [[ ${badge_mode} == "--alpha" ]] ; then
         badge_file_path="${ICON_BADGE_ALPHA}"
-    elif [[ ${badge_mode} != "--beta" ]] ; then
+    elif [[ ${badge_mode} == "--beta" ]] ; then
         badge_file_path="${ICON_BADGE_BETA}"
     fi
     ###### Enumarate all images ######
